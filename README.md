@@ -72,3 +72,6 @@ Department of Automatics and Applied Informatics
 >  *This project was developed as a final year thesis for the completion of a Bachelor's Degree in Automation and Applied Informatics.*
 >  
 >  It showcases how machine learning can be effectively applied to non-invasive medical diagnosis based on voice biometrics.
+> 
+>  *For educational and non-commercial use only.*
+
