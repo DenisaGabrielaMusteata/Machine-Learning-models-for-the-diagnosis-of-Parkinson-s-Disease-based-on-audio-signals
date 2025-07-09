@@ -1,4 +1,4 @@
-# Parkinson's Disease Diagnosis Using Audio Signals
+# Parkinson's Disease Diagnosis Using Audio Signals (Bachelor Degree Project)
 
 This project explores machine learning techniques for diagnosing **Parkinson’s disease** based on **audio signal analysis**, with a focus on speech impairments in prosody, articulation, and phonation. Two main approaches are developed and compared:
 
