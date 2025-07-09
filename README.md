@@ -1,15 +1,17 @@
-# Parkinson's Disease Diagnosis Using Audio Signals (Bachelor's Degree Project)
+#  Parkinson's Disease Diagnosis Using Audio Signals (Bachelor's Degree Thesis)
 
-This project explores machine learning techniques for diagnosing **Parkinson’s disease** based on **audio signal analysis**, with a focus on speech impairments in prosody, articulation, and phonation. Two main approaches are developed and compared:
+This project was developed as part of the **Bachelor’s Degree thesis** for the completion of studies at the **Technical University “Gheorghe Asachi” of Iași**, Faculty of Automatic Control and Computer Engineering. It explores machine learning techniques for diagnosing **Parkinson’s disease** based on **audio signal analysis**, focusing on speech impairments in prosody, articulation, and phonation.
+
+Two main approaches are developed and compared:
 
 - A **Random Forest classifier** using **Fourier features**
 - A **Convolutional Neural Network (AlexNet)** using **Mel-spectrograms**, optimized with a **Genetic Algorithm**
 
-## Motivation
+##  Motivation
 
-Parkinson's disease affects speech in non-trivial ways. By capturing and analyzing voice patterns, this project aims to create a **non-invasive diagnostic tool** using **supervised learning**.
+Parkinson's disease significantly affects speech. By analyzing vocal signals, this project proposes a **non-invasive and efficient diagnostic method** using **supervised learning algorithms**.
 
-## Technologies Used
+##  Technologies Used
 
 - **MATLAB**
 - **Machine Learning (Random Forest)**
@@ -18,47 +20,47 @@ Parkinson's disease affects speech in non-trivial ways. By capturing and analyzi
 - **Mel-Spectrograms**
 - **Genetic Algorithms**
 
-## Dataset
+##  Dataset
 
 - **Source:** [Zenodo - Parkinson’s Voice Dataset](https://zenodo.org/records/2867216)
-- **Contents:** Audio recordings (read text and spontaneous conversation) from healthy and Parkinson’s patients.
+- **Contents:** Audio recordings (reading + conversation) from Parkinson’s patients and healthy individuals
 - **Format:** `.wav`, 44.1kHz, 16-bit
 
-## Methods
+##  Methods
 
-### 1. **Fourier + Random Forest**
-- Preprocessing: Framing, filtering
+### 1. **Fourier Features + Random Forest**
+- Preprocessing: Signal framing and filtering
 - Feature extraction: Discrete Fourier Transform (`fft`)
-- Classifier: Random Forest (tested with 50–200 trees)
-- Result: ~80% test accuracy
+- Classification: Random Forest with 50–200 trees
+- **Accuracy:** ~80% on test data
 
-### 2. **Mel-Spectrograms + CNN**
-- Spectrograms created using variable frequency bands and window sizes
-- Model: AlexNet CNN
-- Optimization: Genetic Algorithm determines best parameters
-- Best Result: >90% accuracy after GA optimization
+### 2. **Mel-Spectrograms + CNN (AlexNet)**
+- Input: Mel-spectrograms with tunable window size and frequency bands
+- Model: Modified AlexNet CNN
+- Optimization: **Genetic Algorithm** for spectrogram parameters
+- **Accuracy:** >90% on test data after optimization
 
-## Genetic Algorithm Details
+##  Genetic Algorithm Overview
 
-- Chromosome: [window size exponent, band count exponent]
-- Fitness: CNN training accuracy
-- Operators: Selection, Crossover (0.7), Mutation (0.1)
-- Optimizes Mel-spectrogram configuration for better CNN performance
+- Chromosome: `[window_size_exponent, mel_band_exponent]`
+- Fitness function: CNN training accuracy
+- Parameters: Crossover = 0.7, Mutation = 0.1
+- Used to find optimal Mel-spectrogram configuration
 
-## Results
+##  Results Summary
 
-| Method         | Accuracy (Test) |
-|----------------|-----------------|
-| Random Forest  | ~80%            |
-| CNN (AlexNet) + Mel | ~85–90% (optimized) |
+| Method              | Test Accuracy      |
+|---------------------|--------------------|
+| Random Forest (FFT) | ~80%               |
+| CNN (AlexNet + Mel) | ~85–90% (optimized)|
 
-## Future Work
+##  Future Work
 
-- Apply genetic optimization to other CNN parameters
-- Expand dataset with more diverse audio samples
-- Integrate LSTM or hybrid architectures
+- Apply genetic optimization to additional CNN hyperparameters
+- Augment the dataset with more varied and natural speech samples
+- Experiment with RNNs/LSTM architectures for sequential analysis
 
-## Author
+##  Author
 
 **Denisa Gabriela Musteață**  
 `denisa-gabriela.musteata@student.tuiasi.ro`  
@@ -67,4 +69,6 @@ Department of Automatics and Applied Informatics
 
 ---
 
-> This repository demonstrates how voice-based biomarkers combined with machine learning can support early detection and monitoring of neurodegenerative disorders.
+>  *This project was developed as a final year thesis for the completion of a Bachelor's Degree in Automation and Applied Informatics.*
+>  
+>  It showcases how machine learning can be effectively applied to non-invasive medical diagnosis based on voice biometrics.
