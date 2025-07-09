@@ -1,0 +1,2 @@
+# Machine-Learning-models-for-the-diagnosis-of-Parkinson-s-Disease-based-on-audio-signals
+This project uses machine learning to detect Parkinson’s disease from speech. It compares a Random Forest using Fourier features with a CNN using Mel-spectrograms. A genetic algorithm optimizes the spectrograms’ frequency bands and range, improving CNN accuracy in identifying speech impairments caused by the disease.
